@@ -25,4 +25,9 @@ socket.on('topicprev', function(data) {
     console.log(data)
 })
 
+socket.on('sessionvote', function(data) {
+    socket.broadcast.emit('sessionvote', data);
+    console.log(data)
+})
+
 }
