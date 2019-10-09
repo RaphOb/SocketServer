@@ -45,4 +45,9 @@ function newConnection(socket) {
         socket.broadcast.emit('isNotVoted', data);
         console.log(data)
     })
+
+    socket.on('stopRoom', function(data) {
+        socket.broadcast.emit('stopRoom', data);
+        console.log(data)
+    })
 }
